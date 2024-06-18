@@ -12,14 +12,28 @@ This is the README file for the Multiecho Preprocessing Pipeline project. It pro
 
 ## Installation
 
-To install the project for local development, follow these steps:
+### Using NORDIC Python package
+To install the project, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Install or create a virtual environment with Python 2.7, 3.6 or 3.7.
-3. Install and configure MATLAB runtime R2019b (for more information, check [MATLAB webpage](https://pages.github.com/)).
+3. Install and configure MATLAB runtime R2019b (for more information, check [MATLAB webpage](https://www.mathworks.com/products/compiler/matlab-runtime.html)).
 4. Install the nordic_python package (available in this repository).
 ```
 python setup.py install
+```
+5. Install singularity.
+6. Download the latest version of C-PAC `singularity pull docker://fcpindi/c-pac:latest`
+
+### Using NORDIC Runtime App on Linux distributions
+To install the project, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install or create a virtual environment with Python 2.7, 3.6 or 3.7.
+3. Install and configure MATLAB runtime R2019b (for more information, check [MATLAB webpage](https://www.mathworks.com/products/compiler/matlab-runtime.html)). 
+4. Change line 32 from the script `run_nordic.sh` to:
+```
+./run_processing_nordic.sh <matlab_runtime_directory> <argument_list>
 ```
 5. Install singularity.
 6. Download the latest version of C-PAC `singularity pull docker://fcpindi/c-pac:latest`
